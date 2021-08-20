@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 60px;
+    letter-spacing: 4px;
+}
+h1 {
+    font-weight: 700;
+    font-size: 50px;
+}
+button {
+    cursor: pointer;
+    color: dimgrey;
+    font-size: 35px;
+    padding: 10px;
+    border: none;
+}
+button:hover{
+    color: black;
+}
+
+
+.container {
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.left-slide {
+    height: 100vh;
+    width: 30%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .5s ease-in-out;
+}
+.left-slide div {
+height: 100%;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.right-slide {
+    height: 100vh;
+    width: 70%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: transform .5s ease-in-out;
+}
+.right-slide div {
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+height: 100%;
+width: 100%;
+}
+.btns button {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    z-index: 100;
+}
+.up {
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.down {
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
